@@ -10,12 +10,6 @@ Before starting, ensure you have the following:
 - Docker installed on your development machine.
 - An AWS account with access to ECR.
 
-## References
-
-- [How to write production-ready Node.js Rest API — Javascript version](https://medium.com/bb-tutorials-and-thoughts/how-to-write-production-ready-node-js-rest-api-javascript-version-db64d3941106)
-- [How To Containerize your Node.js Rest API and run it on Docker](https://medium.com/bb-tutorials-and-thoughts/containerize-your-node-js-rest-api-and-run-it-on-docker-bae4c4ef793c)
-- [How To Run NodeJS APIs on AWS ECS](https://medium.com/bb-tutorials-and-thoughts/how-to-run-nodejs-apis-on-aws-ecs-f50c003b6921)
-
 ## Build Docker Image (with webpack)
 
 * run commands
@@ -32,5 +26,9 @@ Before starting, ensure you have the following:
 * Push Docker image to ECR
     * `docker push YOUR_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/rest-api:v1`
 
+## References
 
+- [How to write production-ready Node.js Rest API — Javascript version](https://medium.com/bb-tutorials-and-thoughts/how-to-write-production-ready-node-js-rest-api-javascript-version-db64d3941106)
+- [How To Containerize your Node.js Rest API and run it on Docker](https://medium.com/bb-tutorials-and-thoughts/containerize-your-node-js-rest-api-and-run-it-on-docker-bae4c4ef793c)
+- [How To Run NodeJS APIs on AWS ECS](https://medium.com/bb-tutorials-and-thoughts/how-to-run-nodejs-apis-on-aws-ecs-f50c003b6921)
 

@@ -19,7 +19,7 @@ module "ecs_cluster" {
 }
 
 module "ecs_application" {
-  source                   = "./application"
+  source                   = "./ecs_service"
   vpc_id                   = local.vpc_id
   vpc_cidr_blocks          = local.vpc_cidr_blocks
   public_subnets           = [local.public_subnet_1.id, local.public_subnet_2.id, local.public_subnet_3.id]

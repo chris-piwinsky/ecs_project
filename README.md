@@ -10,6 +10,7 @@ Before you begin, make sure you have the following prerequisites:
 * An AWS account.
 * AWS access key and secret key with sufficient permissions to create resources.
 * [AWS CLI V2](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+* [AWS infrastructure](https://github.com/chris-piwinsky/aws_networking) project I created to stand up vpc, subnets, internet and nat gateway.
 
 ## Infrastructure Setup
 

@@ -21,16 +21,16 @@ Before starting, ensure you have the following:
 * run commands
     * `npm run build`
     * `docker build -f Dockerfile.webpack -t node-rest-api-webpack .`
-    * `docker run -it -p 8080:3070 --name=nodeapiwithwebpack node-rest-api-webpack`
+    * `docker run -it -p 8080:8080 --name=nodeapiwithwebpack node-rest-api-webpack`
 
 ## Upload Repository to ECR
 
 * Tag your docker image created
-    * `docker tag node-rest-api-webpack:latest 514948286371.dkr.ecr.us-east-1.amazonaws.com/rest-api:v1`
+    * `docker tag node-rest-api-webpack:latest YOUR_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/rest-api:v1`
 * Get your ECR login to your ECR
-    * `aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 514948286371.dkr.ecr.us-east-1.amazonaws.com`
+    * `aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin YOUR_ACCOUNT_ID.dkr.ecr.YOUR_REGION.amazonaws.com`
 * Push Docker image to ECR
-    * `docker push 514948286371.dkr.ecr.us-east-1.amazonaws.com/rest-api:v1`
+    * `docker push YOUR_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/rest-api:v1`
 
 
 

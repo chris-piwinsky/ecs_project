@@ -41,3 +41,7 @@ password_vars.tf
 *.iml
 *.ipr
 
+
+# Dependency directories
+node_modules/
+dist/

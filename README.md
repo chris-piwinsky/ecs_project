@@ -27,3 +27,4 @@ Before you begin, make sure you have the following prerequisites:
 * [AWS Provider Documentation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
 * [Udemy Course](https://www.udemy.com/course/deploy-fargate-ecs-apps-infrastructure-aws-with-terraform/)
 * [How to Deploy a Dockerised Application on AWS ECS With Terraform](https://medium.com/avmconsulting-blog/how-to-deploy-a-dockerised-node-js-application-on-aws-ecs-with-terraform-3e6bceb48785)
+* [How To Run NodeJS APIs on AWS ECS](https://medium.com/bb-tutorials-and-thoughts/how-to-run-nodejs-apis-on-aws-ecs-f50c003b6921)

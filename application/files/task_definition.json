@@ -3,15 +3,21 @@
     "name": "${task_definition_name}",
     "image": "${docker_image_url}",
     "essential": true,
-    "environment": [
-      {
-        "name": "spring_profiles_active",
-        "value": "${spring_profile}"
-      }
-    ],
     "portMappings": [
       {
-        "containerPort": "${docker_container_port}"
+        "containerPort": 8080,
+        "hostPort": 8080,
+        "protocal": "tcp"
+      }
+    ],
+    "environment": [
+      {
+        "name": "NODE_ENV",
+        "value": "production"
+      },
+      {
+        "name": "PORT",
+        "value": "8080"
       }
     ],
     "logConfiguration": {

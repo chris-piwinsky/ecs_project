@@ -9,6 +9,7 @@ Before you begin, make sure you have the following prerequisites:
 * [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) installed on your local machine.
 * An AWS account.
 * AWS access key and secret key with sufficient permissions to create resources.
+* [AWS CLI V2](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
 ## Infrastructure Setup
 
@@ -25,3 +26,4 @@ Before you begin, make sure you have the following prerequisites:
 * [Terraform Documentation](https://developer.hashicorp.com/terraform/docs)
 * [AWS Provider Documentation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
 * [Udemy Course](https://www.udemy.com/course/deploy-fargate-ecs-apps-infrastructure-aws-with-terraform/)
+* [How to Deploy a Dockerised Application on AWS ECS With Terraform](https://medium.com/avmconsulting-blog/how-to-deploy-a-dockerised-node-js-application-on-aws-ecs-with-terraform-3e6bceb48785)

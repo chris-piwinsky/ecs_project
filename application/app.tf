@@ -1,5 +1,5 @@
 data "template_file" "ecs_task_definition_template" {
-  template = file("task_definition.json")
+  template = file("${path.module}/files/task_definition.json")
   vars = {
     task_definition_name  = var.ecs_service_name
     ecs_service_name      = var.ecs_service_name
@@ -24,9 +24,9 @@ resource "aws_ecs_task_definition" "springbootapp_task_definition" {
 
 resource "aws_ecs_service" "ecs_service" {
   name            = var.ecs_service_name
-  task_definition = var.ecs_service_name
+  task_definition = aws_ecs_task_definition.springbootapp_task_definition.arn
   desired_count   = var.desired_task_number
-  cluster         = var.ecs_cluster_name
+  cluster         = var.ecs_cluster_id
   launch_type     = "FARGATE"
 
   network_configuration {
@@ -38,7 +38,7 @@ resource "aws_ecs_service" "ecs_service" {
   load_balancer {
     container_name   = var.ecs_service_name
     container_port   = var.docker_container_port
-    target_group_arn = aws_alb_target_group.ecs_app_target_group.arn
+    target_group_arn = var.ecs_alb_target_group_arn
   }
 
 }
@@ -47,7 +47,7 @@ resource "aws_alb_listener_rule" "ecs_alb_listener_rule" {
   listener_arn = var.ecs_alb_listener_arn
   action {
     type             = "forward"
-    target_group_arn = aws_alb_target_group.ecs_app_target_group.arn
+    target_group_arn = var.ecs_alb_target_group_arn
   }
   condition {
     host_header {

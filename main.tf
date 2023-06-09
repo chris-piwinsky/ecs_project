@@ -9,7 +9,7 @@ locals {
 module "ecs_cluster" {
   source               = "./ecs_cluster"
   ecs_cluster_name     = "production-ecs-cluster"
-  ecs_domain_name      = "chrispiwinsky.com"
+  ecs_domain_name      = var.ECS_DOMAIN
   vpc_id               = local.vpc_id
   internet_cidr_blocks = "0.0.0.0/0"
   public_subnet_1      = local.public_subnet_1
@@ -29,7 +29,7 @@ module "ecs_application" {
   ecs_alb_target_group_arn = module.ecs_cluster.ecs_alb_target_group_arn
   ecs_alb_listener_arn     = module.ecs_cluster.ecs_alb_listener_arn
   ecs_domain_name          = module.ecs_cluster.ecs_domain_name
-  docker_image_url         = "514948286371.dkr.ecr.us-east-1.amazonaws.com/rest-api:v1"
+  docker_image_url         = var.DOCKER_IMAGE_URL
   docker_container_port    = "8080"
   spring_profile           = "default"
   memory                   = 1024

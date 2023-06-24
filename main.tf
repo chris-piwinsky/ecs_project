@@ -35,3 +35,12 @@ module "ecs_application" {
   memory                   = 1024
   desired_task_number      = 2
 }
+
+resource "aws_ecr_repository" "foo" {
+  name                 = "chris_test"
+  image_tag_mutability = "MUTABLE"
+
+  image_scanning_configuration {
+    scan_on_push = true
+  }
+}
